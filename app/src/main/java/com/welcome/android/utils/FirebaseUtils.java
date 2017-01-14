@@ -68,14 +68,14 @@ public class FirebaseUtils {
     public static Task updatePassword(String password) {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser == null)
-            throw new RuntimeException("can't update email when no user is logged in");
+            throw new RuntimeException("can't update password when no user is logged in");
         return currentUser.updatePassword(password);
     }
 
     public static Task updateProfile(User currentUserObject, String displayName, Uri profilePicUri) {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser == null)
-            throw new RuntimeException("can't update email when no user is logged in");
+            throw new RuntimeException("can't update profile when no user is logged in");
         UserProfileChangeRequest.Builder builder = new UserProfileChangeRequest.Builder();
         builder.setDisplayName(displayName);
         builder.setPhotoUri(profilePicUri);
