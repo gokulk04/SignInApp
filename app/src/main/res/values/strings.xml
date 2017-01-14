@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SignInApp_1_8</string>
+    <string name="app_name">Welcome</string>
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">LOG IN</string>
     <string name="skip">SIGN UP</string>
